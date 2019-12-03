@@ -2,9 +2,9 @@
 
 Integrantes:
 
-Andres Coro
-Jorge Iza
-Omar Diaz
+-Andres Coro
+-Jorge Iza
+-Omar Diaz
 
 Herramientas:
 
