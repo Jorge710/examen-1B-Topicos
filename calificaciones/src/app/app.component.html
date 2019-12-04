@@ -1,4 +1,7 @@
-<div>
+<div class="container main-container">
+  
+</div>
+<!--<div>
   <body>
     <div class="container">
       <div class="d-flex justify-content-center h-100">
@@ -33,7 +36,7 @@
               </div>
               
               <div class="form-group">
-                <input type="submit" value="Login" class="btn float-left login_btn">
+                <input type="submit" value="Login" class="btn float-left login_btn" href="https://www.youtube.com/watch?v=eVlRQn6AMYs&list=RDMM5gWGgpRdzZ8&index=2">
               </div>
             </form>
           </div>
@@ -48,4 +51,41 @@
       </div>
     </div>
   </body>
-</div>
+</div>-->
+
+<div align="center">
+    <h1>LISTA DE USUARIOS REGISTRADOS</h1>
+    <table border="1" *ngIf="hayRegistros(); else sin">
+      <tr>
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>TELEFONO</td>
+        <td>EMAIL</td>
+        <td>BORRAR</td>
+        <td>SELECCIONAR</td>
+      </tr>
+      <tr *ngFor="let usuario of usuarios">
+        <td> {{usuario.idUsuario }} </td>
+        <td> {{usuario.nombre }} </td>
+        <td> {{usuario.telefono }} </td>
+        <td> {{usuario.email }} </td>
+        <td> <button (click)="bajaUsuario(usuario.idUsuario)"> Borrar </button> </td>
+        <td> <button (click)="seleccionarUsuario(usuario.idUsuario)"> Seleccionar </button> </td>
+      </tr>
+    </table>
+  
+    <ng-template #sin>
+      <p>No hay usuarios registrados.</p>
+    </ng-template>
+  
+    <div>
+      <p> Nombre: <input type="text" [(ngModel)]="usuario.nombre" /> </p>
+      <p> Telefono: <input type="number" [(ngModel)]="usuario.telefono" /> </p>
+      <p> Email: <input type="text" [(ngModel)]="usuario.email" /> </p>
+      <p> 
+        <button (click)="altaUsuario()"> AGREGAR </button> 
+        <button (click)="editarUsuario()"> MODIFICAR </button> 
+      </p>
+    </div>
+  
+  </div>
