@@ -14,7 +14,9 @@ import { ConexionService } from 'src/app/services/conexion.service';
 export class AddComponent implements OnInit {
 
   item:any = {
-    nombre:''
+    nombre:'',
+    nota1:'',
+    nota2:''
   }
 
   constructor(private servicio:ConexionService) { }
@@ -25,6 +27,8 @@ export class AddComponent implements OnInit {
   agregar(){
     this.servicio.agregarItem(this.item);
     this.item.nombre='';
+    this.item.nota1='';
+    this.item.nota2='';
   }
 
   
