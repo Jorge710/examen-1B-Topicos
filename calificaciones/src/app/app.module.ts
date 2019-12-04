@@ -22,11 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddComponent } from './add/add.component'; 
 import { LoginComponent } from './login/login.component';
 //
+import { ConexionService } from './services/conexion.service';
+
+
 export const routes: Routes = [
   {path:'', component: LoginComponent, pathMatch: 'full'},
   {path: 'view', component: ViewComponent},
   {path: 'add', component: AddComponent}
 ];
+
 
 @NgModule({
   declarations: [

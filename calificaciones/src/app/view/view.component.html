@@ -13,9 +13,9 @@
                         <div class="panel panel-default panel-table">
                           <div class="panel-heading">
                             <div class="row">
-                              <div class="col col-xs-6">
+                              <div class="col-xs-6">
                               </div>
-                              <div class="col col-xs-6 text-right">
+                              <div class="col-xs-6">
                                 <div style="align-content: center;">
                                     <a href="" routerLink="/add" class="btn btn-primary">Añadir Nuevo Estudiante</a>
                                 </div>
@@ -34,9 +34,10 @@
                                     <!--<th></th>-->
                                 </tr> 
                               </thead>
-                              <tbody *ngFor="let item of estudiantes | async">
+                              <tbody *ngFor="let item of estudiantes">
+                                <!-- | async-->
                                       <tr>
-                                        <td align="center">
+                                        <td style="align-content: center;">
                                           <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
                                           <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
                                         </td>

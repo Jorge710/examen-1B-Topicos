@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 //
 
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ConexionService } from 'src/app/services/conexion.service';
+
 
 
 @Component({
@@ -12,10 +13,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, 
-    private router: Router) { }
+  item:any = {
+    nombre:''
+  }
+
+  constructor(private servicio:ConexionService) { }
 
   ngOnInit() {
+  }
+
+  agregar(){
+    this.servicio.agregarItem(this.item);
+    this.item.nombre='';
   }
 
   
