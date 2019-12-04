@@ -1,0 +1,31 @@
+<div class="container" class="listaFicha">
+    <h2>Listado de Estudiantes Topicos Especiales</h2>
+    
+    <div class="row" class="listaFicha">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Nota 1</th>
+                        <th scope="col">Nota 2</th>
+                        <th scope="col">Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of estudiantes | async">
+                    <tr>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.nota1}}</td>
+                        <td>{{item.nota2}}</td>
+                        <td>{{item.total}}</td>
+                        <!--<td><button class="btn btn-primary">Seleccionar</button></td>-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="align-content: center;">
+            <a href="" routerLink="/add" class="btn btn-primary">Añadir Nuevo Estudiante</a>
+        </div>
+    </div>
+</div>
