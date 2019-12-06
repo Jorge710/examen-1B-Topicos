@@ -24,6 +24,7 @@ export class AddComponent implements OnInit {
     nota1:'',
     nota2:'',
     total:'',
+    correo: '',
   }
 
   constructor(private servicio:ConexionService) { }
@@ -39,6 +40,7 @@ export class AddComponent implements OnInit {
     this.item.nota1='';
     this.item.nota2='';
     this.item.total=parseInt(this.val1)+parseInt(this.val2);
+    this.nomb = '';
   }
 
    
