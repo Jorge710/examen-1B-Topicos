@@ -16,7 +16,13 @@ export class ViewComponent implements OnInit {
     //this.estudiantes = db.collection('estudiantes').valueChanges();
   //}
 
+  
+
   estudiantes:any;
+
+  editarItem:any = {
+    nombre: ''
+  }
 
   constructor(private conexion: ConexionService){
     this.estudiantes = this.conexion.listaItem().subscribe(item=>{
@@ -28,4 +34,15 @@ export class ViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  eliminar(item){
+    this.conexion.eliminarItem(item);
+  }
+
+  editar(item){
+    this.editarItem = item;
+  }
+
+  agregarItemEditado(){
+    this.conexion.editarItem(this.editarItem);
+  }
 }

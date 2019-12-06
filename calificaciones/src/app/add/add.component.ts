@@ -16,7 +16,8 @@ export class AddComponent implements OnInit {
   item:any = {
     nombre:'',
     nota1:'',
-    nota2:''
+    nota2:'',
+    total: ''
   }
 
   constructor(private servicio:ConexionService) { }
@@ -24,13 +25,18 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
+    val1:number;
+    val2:number;
+    total:number;
+  
   agregar(){
     this.servicio.agregarItem(this.item);
     this.item.nombre='';
     this.item.nota1='';
     this.item.nota2='';
-  }
+    this.item.total=this.val1+this.val2;
 
-  
+    console.log("resultado:  "+ this.val1);
+  }
 
 }

@@ -23,6 +23,7 @@ import { AddComponent } from './add/add.component';
 import { LoginComponent } from './login/login.component';
 //
 import { ConexionService } from './services/conexion.service';
+import { HeaderComponent } from './header/header.component';
 
 
 export const routes: Routes = [
@@ -37,7 +38,8 @@ export const routes: Routes = [
     AppComponent,
     ViewComponent,
     AddComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
