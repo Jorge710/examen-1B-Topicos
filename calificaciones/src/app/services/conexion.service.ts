@@ -8,6 +8,7 @@ export interface Item { nombre: string;
                         nota1: number;
                         nota2: number;
                         total: number;
+                        correo: string;
                         }
 
 

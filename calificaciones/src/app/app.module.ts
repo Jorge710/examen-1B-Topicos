@@ -24,6 +24,7 @@ import { LoginComponent } from './login/login.component';
 //
 import { ConexionService } from './services/conexion.service';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 export const routes: Routes = [
@@ -39,7 +40,8 @@ export const routes: Routes = [
     ViewComponent,
     AddComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

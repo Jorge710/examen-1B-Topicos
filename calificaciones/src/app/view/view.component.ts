@@ -21,7 +21,9 @@ export class ViewComponent implements OnInit {
   estudiantes:any;
 
   editarItem:any = {
-    nombre: ''
+    nombre: '',
+    nota1: '',
+    nota2: ''
   }
 
   constructor(private conexion: ConexionService){
