@@ -25,12 +25,14 @@ import { LoginComponent } from './login/login.component';
 import { ConexionService } from './services/conexion.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SignInComponent } from './signin/signin.component';
 
 
 export const routes: Routes = [
   {path:'', component: LoginComponent, pathMatch: 'full'},
   {path: 'view', component: ViewComponent},
-  {path: 'add', component: AddComponent}
+  {path: 'add', component: AddComponent},
+  {path: 'signin', component: SignInComponent}
 ];
 
 
@@ -41,7 +43,8 @@ export const routes: Routes = [
     AddComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
